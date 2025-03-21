@@ -11,19 +11,19 @@ jobs:
     environment: my_project_env
     steps:
         - name: Checkout Repository
-            uses: actions/checkout@v2
+          uses: actions/checkout@v2
 
         - name: Set Up Python
-            uses: actions/setup-python@v2
-            with:
-            python-version: 3.12
+          uses: actions/setup-python@v2
+          with:
+          python-version: 3.12
 
         - name: Install Dependencies and Libraries
-            run: | 
+          run: | 
             pip install -r requirements/dev.txt
 
         - name: Run our Unit Test
-            run: |
+          run: |
             make dev-test2
             
 
